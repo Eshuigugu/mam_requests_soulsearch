@@ -29,7 +29,6 @@ def query_soulsearch(query, num_files_to_print=3):
             break
         if line == 'event: done':
             break
-    r.close()
     return ss_results
 
 
