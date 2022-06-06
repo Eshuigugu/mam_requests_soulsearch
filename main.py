@@ -77,7 +77,7 @@ soulsearch_url = 'http://localhost:3000/api/search'
 req_books = fetch_requests()
 reduce_query_str = lambda query_str: ' '.join([x for x in query_str.split(' ') if len(x) > 1])
 
-for book in req_books[:20]:
+for book in req_books:
     book['url'] = 'https://www.myanonamouse.net/tor/viewRequest.php/' + str(book['id'])[:-5] + '.' + str(book['id'])[
                                                                                                      -5:]
     title = BeautifulSoup(f'<h1>{book["title"]}</h1>', features="lxml").text
